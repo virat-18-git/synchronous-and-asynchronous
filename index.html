@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // localStorage.setItem("data","value")
+        // sessionStorage.setItem("data","value")
+        // let obj={"name":"shiva"}
+        // let x=localStorage.setItem("data",JSON.stringify(obj))
+        // let storedData=localStorage.getItem("data");
+        // console.log(JSON.parse(storedData))
+        // let obj1={"username":"shiva","city":"hyderabad"}
+        // localStorage.setItem("data",JSON.stringify(obj1))
+        // let x1=localStorage.getItem("data",)
+        // console.log(JSON.parse(x1).city)
+        let userInfo={"name":"shiva","gender":"male","email":"shiva@gmail.com"}
+        let userDetails=JSON.parse(localStorage.getItem("data"))||[]
+        userDetails.push(userInfo)
+        localStorage.setItem("data",JSON.stringify(userDetails));
+        let localStorageData=JSON.parse(localStorage.getItem("data"))
+        console.log(localStorageData);
+        localStorageData.map((x)=>{console.log(x)})
+
+    </script>
+    
+</body>
+</html>
