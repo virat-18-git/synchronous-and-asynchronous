@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function asynchronous1(cbf) {
+        setTimeout(() => {
+          console.log("i am asynchronous1");
+          cbf();
+        }, 1500);
+      }
+      function asynchronous2(cbf) {
+        setTimeout(() => {
+          console.log("i am asynchronous2");
+          cbf();
+        }, 1000);
+      }
+      function asynchronous3() {
+        setTimeout(() => {
+          console.log("i am asynchronous3");
+        }, 2000);
+      }
+      asynchronous1(() => asynchronous2(() => asynchronous3()));
+    </script>
+  </body>
+</html>

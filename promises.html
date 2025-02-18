@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let pr = new Promise((res, rej) => {
+        if (true) {
+          res("promise was resolved");
+        } else {
+          rej("promise was rejected");
+        }
+      });
+      pr.then((x) => {
+        console.log(x);
+      }).catch((x) => {
+        console.log(x);
+      });
+      // console.log(pr)
+    </script>
+  </body>
+</html>

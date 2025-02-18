@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        border: 2px solid green;
+        height: max-content;
+        width: max-content;
+        padding: 10px;
+        margin: 10px;
+        /* border-radius: 100%; */
+        display: inline-block;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <video id="v1" controls src="" height="250" width="250"></video>
+    <script>
+        let i=3;
+        let timer=document.getElementById("p1")
+        let videoElement=document.getElementById("v1")
+        let x=setInterval(()=>{
+            timer.innerHTML=`skip add in ${i--}`
+            if(i<0){
+                clearInterval(x);
+                timer.style.display="none"
+                videoElement.src="./videos/video.mp4"
+
+            }
+        },1000)
+     
+    </script>
+  </body>
+</html>
